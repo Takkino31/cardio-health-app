@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capture Vidéo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/video_capture.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>Capture Vidéo</h1>
-        <div class="video-container">
-            <video id="videoElement" autoplay></video>
-            <button id="captureButton">Capture Vidéo</button>
+    <div class="container mt-5">
+        <h1 class="text-center">Capture Vidéo</h1>
+        <div class="row">
+            <div class="col text-center">
+                <video id="video" width="600" height="400" autoplay></video>
+                <br>
+                <button id="startButton" class="btn btn-danger mt-3">Commencer l'enregistrement</button>
+                <button id="stopButton" class="btn btn-secondary mt-3" disabled>Arrêter l'enregistrement</button>
+                <br>
+                <video id="recordedVideo" width="600" height="400" controls></video>
+            </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="{{ url_for('static', filename='js/video_capture.js') }}"></script>
 </body>
 </html>
