@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Vidéo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/video_capture.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Capture Vidéo</h1>
+        <div class="video-container">
+            <video id="videoElement" autoplay></video>
+            <button id="captureButton">Capture Vidéo</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/video_capture.js') }}"></script>
+</body>
+</html>

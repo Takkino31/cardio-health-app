@@ -1,0 +1,39 @@
+/* Styles pour la page de capture vidéo */
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    color: #dc3545;
+}
+
+.video-container {
+    display: inline-block;
+    position: relative;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#captureButton {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#captureButton:hover {
+    background-color: #c82333;
+}

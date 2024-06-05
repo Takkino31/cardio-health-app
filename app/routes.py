@@ -25,3 +25,5 @@ def chatbot():
 @bp.route('/video_capture')
 def video_capture():
     return render_template('video_capture.html')
+
+# Ajoutez d'autres routes ici
