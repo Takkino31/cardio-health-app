@@ -1,7 +1,4 @@
-from flask import Blueprint, request, jsonify, render_template
-import cv2
-import numpy as np
-from .utils import calculate_heart_rate
+from flask import Blueprint, render_template
 
 bp = Blueprint('main', __name__)
 
@@ -9,11 +6,22 @@ bp = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
-@bp.route('/process_video', methods=['POST'])
-def process_video():
-    file = request.files['video']
-    video_data = np.frombuffer(file.read(), np.uint8)
-    image = cv2.imdecode(video_data, cv2.IMREAD_COLOR)
+@bp.route('/login')
+def login():
+    return render_template('login.html')
 
-    heart_rate = calculate_heart_rate(image)
-    return jsonify({'heart_rate': heart_rate})
+@bp.route('/register')
+def register():
+    return render_template('register.html')
+
+@bp.route('/nutrition')
+def nutrition():
+    return render_template('nutrition.html')
+
+@bp.route('/chatbot')
+def chatbot():
+    return render_template('chatbot.html')
+
+@bp.route('/video_capture')
+def video_capture():
+    return render_template('video_capture.html')

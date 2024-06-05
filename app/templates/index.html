@@ -3,14 +3,58 @@
 <head>
     <title>Cardiovascular Health Check</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h1 class="text-center">Cardiovascular Health Check</h1>
-        <video id="videoElement" autoplay></video>
-        <button id="capture" class="btn btn-primary mt-3">Capture Video</button>
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <a href="/login" class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-sign-in-alt fa-3x text-danger"></i>
+                        <h5 class="card-title mt-3">Se connecter</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="/register" class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-user-plus fa-3x text-danger"></i>
+                        <h5 class="card-title mt-3">S'inscrire</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="/nutrition" class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-apple-alt fa-3x text-danger"></i>
+                        <h5 class="card-title mt-3">Conseils en Nutrition</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="/chatbot" class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-robot fa-3x text-danger"></i>
+                        <h5 class="card-title mt-3">Chatbot</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="/video_capture" class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-video fa-3x text-danger"></i>
+                        <h5 class="card-title mt-3">Capture vidéo</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

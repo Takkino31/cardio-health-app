@@ -1,9 +1,20 @@
 body {
     padding-top: 50px;
 }
-#videoElement {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    display: block;
+
+.card {
+    border: none;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #dc3545; /* Couleur sang */
+}
+
+.text-danger {
+    color: #dc3545 !important; /* Couleur sang pour les icônes */
 }
