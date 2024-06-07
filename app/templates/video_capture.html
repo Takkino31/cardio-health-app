@@ -3,7 +3,11 @@
 <head>
     <title>Capture Vidéo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/video_capture.css') }}">
+    <style>
+        #ecgCanvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
@@ -16,6 +20,8 @@
                 <button id="stopButton" class="btn btn-secondary mt-3" disabled>Arrêter l'enregistrement</button>
                 <br>
                 <video id="recordedVideo" width="600" height="400" controls></video>
+                <br>
+                <canvas id="ecgCanvas" width="600" height="200"></canvas>
             </div>
         </div>
     </div>
